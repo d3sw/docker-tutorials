@@ -1,31 +1,64 @@
 
-### Prep
+### Pre-flight Check
+List currently running containers:
 
 ```
-docker images
 docker ps
 ```
 
+List locally available images:
+
+```
+docker images
+```
+
 ### Run
+Run an nginx container:
 
 ```
 docker run --name example1 -d -p 9898:80 nginx
 ```
-- -d run as daemon
-- -p map container port 80 to host port 9898
+- --name give the container a unique name of `example1`
+- -d run nginx as a daemon
+- -p map the container port `80` to the host port `9898`
+
+If you navigate to http://localhost:9898 you should be able to see the default
+nginx page.
 
 ### Inspect
+List currently running containers:
+
 ```
 docker ps
+```
+
+Inspect container to get details and properties:
+
+```
 docker inspect example1
+```
+
+Check running processes on our container:
+
+```
 docker exec -it example1 /bin/bash
 
     ps auwx
 
 ```
 
+Stop and remove the container:
+
+```
+docker rm -f example1
+```
+
 ### Modify
+
+Build an image with our `Dockerfile`:
 
 ```
 docker build -t example2 .
 ```
+
+Our new image by the name of `example2` now contains a custom page for nginx.
