@@ -38,15 +38,19 @@ Inspect container to get details and properties:
 docker inspect example1
 ```
 
-Check running processes on our container:
+Exec into the container using the provided command.  In this case we will launch
+a bash shell.
 
 ```
-# Perform and exec in the container using the provided command.  In this case it
-# will launch a bash shell.
 docker exec -it example1 /bin/bash
+```
 
-## Once in the container, list the running processes
+Once in the container, list the running processes, look around and exit:
+
+```
 $ ps auwx
+$ ....
+$ exit
 ```
 
 Stop and remove the container:
@@ -57,10 +61,15 @@ docker rm -f example1
 
 ### Modify
 
-Build an image with our `Dockerfile`:
+Build a custom image with our `Dockerfile` to be run as a  contianer:
 
 ```
-docker build -t example2 .
+docker build -t myimage .
 ```
 
-Our new image by the name of `example2` now contains a custom page for nginx.
+Our new image by the name of `myimage` now contains a custom page for nginx.  We
+can now use the `run` command to launch our newly built image:
+
+```
+docker run --name example2 -d -p 9898:80 myimage
+```
