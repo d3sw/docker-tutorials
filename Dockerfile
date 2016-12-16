@@ -1,4 +1,5 @@
 
+MAINTAINER first.last@domain.com
 # Start with the base nginx image.  This implicitly uses nginx:latest
 FROM nginx
 # Add our custom index.html

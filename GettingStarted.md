@@ -22,8 +22,8 @@ docker run --name example1 -d -p 9898:80 nginx
 - -d run nginx as a daemon
 - -p map the container port `80` to the host port `9898`
 
-If you navigate to http://localhost:9898 you should be able to see the default
-nginx page.
+If you navigate to [http://localhost:9898](http://localhost:9898), you should be
+able to see the default nginx page.
 
 ### Inspect
 List currently running containers:
@@ -41,10 +41,12 @@ docker inspect example1
 Check running processes on our container:
 
 ```
+# Perform and exec in the container using the provided command.  In this case it
+# will launch a bash shell.
 docker exec -it example1 /bin/bash
 
-    ps auwx
-
+## Once in the container, list the running processes
+$ ps auwx
 ```
 
 Stop and remove the container:
