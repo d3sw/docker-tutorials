@@ -38,6 +38,13 @@ Inspect container to get details and properties:
 docker inspect example1
 ```
 
+Get container logs i.e. your application logs:
+
+```
+docker logs example1
+```
+
+
 Exec into the container using the provided command.  In this case we will launch
 a bash shell.
 

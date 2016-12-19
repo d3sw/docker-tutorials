@@ -25,19 +25,19 @@ starting from the system up:
 These are requirements that essential to all applications i.e. resources that the
 application cannot function without.
 
-1. CPU
-2. Memory
+- 1. CPU
+- 2. Memory
 
 ### Optional
 These are requirements based on the function of the application and may not be
 needed by all software.
 
-3. Disk Space
-4. Network
+- 3. Disk Space
+- 4. Network
 
 ### Application
 These are requirements that are very specific to the application.
 
-5. OS
-6. Application
-7. Application Configuration
+- 5. OS
+- 6. Application
+- 7. Application Configuration
