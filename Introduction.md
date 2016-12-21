@@ -41,3 +41,5 @@ These are requirements that are very specific to the application.
 - 5. OS
 - 6. Application
 - 7. Application Configuration
+
+[Next](GettingStarted.md)
