@@ -42,4 +42,8 @@ These are requirements that are very specific to the application.
 - 6. Application
 - 7. Application Configuration
 
+## Approach
+Each requirement above is tackled in the reverse order starting with the [Application](#application)
+first and working our way up to [Constant](#constant) requirements.
+
 [Next](GettingStarted.md)
